@@ -12,16 +12,16 @@ const Header = () => {
 					<img src={assets.group_profiles} alt="" className="w-28" />
 					<p>
 						Simply browse through our extensive list of trusted doctors,
-						<br />
-						schedule your appointment hassle-free.
+						<br className="hidden sm:block"/>
+						schedule your appointment hassle-free.	
 					</p>
 				</div>
 				<a
-					href="/"
-					className="flex flex-row items-center bg-gray-100 px-6 py-3 text-gray-600 w-1/3 rounded-full text-sm"
+					href="#speciality"
+					className="flex items-center gap-2 bg-gray-100 px-8 py-2 text-gray-600  rounded-full text-sm m-auto md:m-0 duration-500 hover:scale-105"
 				>
 					Book appointment
-					<img src={assets.arrow_icon} alt="" className="w-3 ml-2" />
+					<img src={assets.arrow_icon} alt="" className="w-3" />
 				</a>
 			</div>
 
