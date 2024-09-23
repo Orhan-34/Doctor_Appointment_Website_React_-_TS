@@ -1,50 +1,33 @@
 # React + TypeScript + Vite
+## Home Page
+<img width="1792" alt="Ekran Resmi 2024-09-23 14 26 00" src="https://github.com/user-attachments/assets/2d448543-ead5-4942-a8ea-f8eaa014a380">
+<img width="1792" alt="Ekran Resmi 2024-09-23 14 26 12" src="https://github.com/user-attachments/assets/cf82ea09-7d59-432a-b804-8e08b4d83e6f">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ALL DOCTORS PAGE
+<img width="1792" alt="Ekran Resmi 2024-09-23 14 26 38" src="https://github.com/user-attachments/assets/07e66b65-c80f-4f3c-afa9-b4d39b34cac0">
 
-Currently, two official plugins are available:
+##When Click Doctor's Card
+<img width="1792" alt="Ekran Resmi 2024-09-23 14 27 04" src="https://github.com/user-attachments/assets/da8ea881-5497-427c-9c5b-70650a478c3b">
+<img width="1792" alt="Ekran Resmi 2024-09-23 14 27 11" src="https://github.com/user-attachments/assets/7046f3a4-01cc-4b7b-ba76-2837c12333aa">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Appointment Page
+<img width="1792" alt="Ekran Resmi 2024-09-23 14 27 47" src="https://github.com/user-attachments/assets/daf4e619-ebbb-4196-9c85-1264ce7182dc">
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Login Page
+<img width="1792" alt="Ekran Resmi 2024-09-23 14 27 59" src="https://github.com/user-attachments/assets/8c3a2630-5d75-48a0-9e90-20308b424dcf">
 
-- Configure the top-level `parserOptions` property like this:
+## Profile Page
+<img width="1792" alt="Ekran Resmi 2024-09-23 14 27 37" src="https://github.com/user-attachments/assets/434ffb61-791d-4c6e-8523-51bc4e819411">
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Sign Up Page
+<img width="1792" alt="Ekran Resmi 2024-09-23 14 27 55" src="https://github.com/user-attachments/assets/cb0ac096-f420-49f7-965c-15783c42112c">
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Abou Us Page
+<img width="1792" alt="Ekran Resmi 2024-09-23 14 27 21" src="https://github.com/user-attachments/assets/fb271128-1f07-4488-b7a9-c50b7b57998d">
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Footer
+<img width="1792" alt="Ekran Resmi 2024-09-23 14 26 24" src="https://github.com/user-attachments/assets/34f80607-316b-42cf-84e2-b87e9e5d54b7">
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+
