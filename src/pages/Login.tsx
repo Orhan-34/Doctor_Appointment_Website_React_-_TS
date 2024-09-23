@@ -3,6 +3,9 @@ import { toast } from "react-toastify";
 
 const Login = () => {
 	const [login, setLogin] = useState<boolean>(false);
+	const [name, setName] = useState<string>("");
+	const [email, setEmail] = useState<string>("");
+	const [password, setPassword] = useState<string>("");
 
 	const handleLogin = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		setLogin(!login);
@@ -30,6 +33,8 @@ const Login = () => {
 					<input
 						type="text"
 						id="name"
+						onChange={(e) => setName(e.target.value)}
+						value={name}
 						required
 						className="border border-gray-200 py-2 rounded-md px-2"
 					/>
@@ -39,6 +44,8 @@ const Login = () => {
 					<input
 						type="email"
 						id="email"
+						onChange={(e) => setEmail(e.target.value)}
+						value={email}
 						required
 						className="border border-gray-200 py-2 rounded-md px-2"
 					/>
@@ -48,6 +55,8 @@ const Login = () => {
 					<input
 						type="password"
 						id="password"
+						onChange={(e) => setPassword(e.target.value)}
+						value={password}
 						required
 						className="border border-gray-200 py-2 rounded-md px-2"
 					/>

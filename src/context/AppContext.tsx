@@ -3,6 +3,7 @@ import { doctors } from "../assets/assets_frontend/assets";
 
 interface AppContextProps {
 	doctors: typeof doctors;
+	currency: string;
 }
 
 interface AppContextProviderProps {
@@ -11,6 +12,7 @@ interface AppContextProviderProps {
 
 const defaultContext: AppContextProps = {
 	doctors: [],
+	currency: '',
   };
   
 
@@ -20,6 +22,7 @@ export const AppContext = createContext<AppContextProps>(defaultContext);
 const AppContextProvider = (props: AppContextProviderProps) => {
 	const value: AppContextProps = {
 		doctors,
+		currency: '$',
 	};
 
 	return (

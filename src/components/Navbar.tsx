@@ -73,6 +73,41 @@ const Navbar = () => {
 						</button>
 					</div>
 				)}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+				<img
+					onClick={() => setShowMenu(true)}
+					src={assets.menu_icon}
+					alt=""
+					className="w-6 md:hidden"
+				/>
+				<div
+					className={`${showMenu ? "fixed w-full" : "w-0 h-0"} md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all `}
+				>
+					<div className="flex items-center justify-between px-5 py-6">
+						<img src={assets.logo} alt="" className="w-36" />
+						{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+						<img
+							src={assets.cross_icon}
+							className="w-7"
+							alt=""
+							onClick={() => setShowMenu(false)}
+						/>
+					</div>
+					<ul className="flex flex-col items-center justify-center font-medium text-lg gap-3 mt-4">
+						<NavLink onClick={() => setShowMenu(false)} to={"/"}>
+							<p>Home</p>
+						</NavLink>
+						<NavLink onClick={() => setShowMenu(false)} to={"/doctors"}>
+							<p>All doctors</p>
+						</NavLink>
+						<NavLink onClick={() => setShowMenu(false)} to={"/about"}>
+							<p>About</p>
+						</NavLink>
+						<NavLink onClick={() => setShowMenu(false)} to={"/contact"}>
+							<p>Contact</p>
+						</NavLink>
+					</ul>
+				</div>
 			</div>
 		</div>
 	);

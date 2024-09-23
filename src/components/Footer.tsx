@@ -1,8 +1,12 @@
 import { assets } from "../assets/assets_frontend/assets";
 
-const Footer = () => {
+interface FooterProps {
+  className?: string;
+}
+
+const Footer = ({ className }: FooterProps) => {
 	return (
-		<div>
+		<div  className={` ${className} px-10`}>
 			<div className="flex flex-col sm:grid sm:grid-cols-[3fr_1fr_1fr] gap-5 justify-between ">
 				<div>
 					<img src={assets.mhrsLogo} alt="" className="w-36" />

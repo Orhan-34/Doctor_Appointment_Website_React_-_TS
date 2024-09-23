@@ -5,6 +5,7 @@ import { AppContext } from "../context/AppContext";
 const Doctors = () => {
 	const navigate = useNavigate();
 	const [filterDr, setFilterDr] = useState<typeof doctors>([]);
+	const [filterShow, setFilterShow] = useState<boolean>(false);
 	const { speciality } = useParams();
 	const { doctors } = useContext(AppContext);
 
@@ -25,8 +26,17 @@ const Doctors = () => {
 			<p className="text-gray-600 font-medium mb-5">
 				Browse through the doctors specialist.
 			</p>
-			<div className="flex flex-row gap-5">
-				<div className="flex-col gap-4 text-sm text-gray-600 hidden sm:flex mt-4">
+			<div className="flex flex-col sm:flex-row items-start gap-5 mt-5">
+				{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+				<button
+					className={`py-2 px-10 border transition-all rounded sm:hidden text-sm ${filterShow ? "bg-primary text-white" : "text-primary"}`}
+					onClick={() => setFilterShow((prev) => !prev)}
+				>
+					Filter
+				</button>
+				<div
+					className={`flex-col gap-4 text-sm text-gray-600 mt-4 ${filterShow ? "flex" : "hidden"}`}
+				>
 					{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 					<p
 						onClick={() =>
@@ -34,8 +44,8 @@ const Doctors = () => {
 								? navigate("/doctors")
 								: navigate("/doctors/General physician")
 						}
-						className="border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
-					hover:bg-blue-100 hover:translate-x-[-30px] duration-500"
+						className={`border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
+							hover:bg-blue-100 hover:translate-x-[-30px] duration-500 ${speciality === "General physician" && "bg-blue-100"}`}
 					>
 						General physician
 					</p>
@@ -46,8 +56,8 @@ const Doctors = () => {
 								? navigate("/doctors")
 								: navigate("/doctors/Gynecologist")
 						}
-						className="border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
-					hover:bg-blue-100 hover:translate-x-[-30px] duration-500"
+						className={`border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
+					hover:bg-blue-100 hover:translate-x-[-30px] duration-500 ${speciality === "Gynecologist" && "bg-blue-100"}`}
 					>
 						Gynecologist
 					</p>
@@ -58,8 +68,8 @@ const Doctors = () => {
 								? navigate("/doctors")
 								: navigate("/doctors/Neurologist")
 						}
-						className="border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
-					hover:bg-blue-100 hover:translate-x-[-30px] duration-500"
+						className={`border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
+							hover:bg-blue-100 hover:translate-x-[-30px] duration-500 ${speciality === "Neurologist" && "bg-blue-100"}`}
 					>
 						Neurologist
 					</p>
@@ -70,8 +80,8 @@ const Doctors = () => {
 								? navigate("/doctors")
 								: navigate("/doctors/Pediatricians")
 						}
-						className="border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
-					hover:bg-blue-100 hover:translate-x-[-30px] duration-500"
+						className={`border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
+							hover:bg-blue-100 hover:translate-x-[-30px] duration-500 ${speciality === "Pediatricians" && "bg-blue-100"}`}
 					>
 						Pediatricians
 					</p>
@@ -82,8 +92,8 @@ const Doctors = () => {
 								? navigate("/doctors")
 								: navigate("/doctors/Dermatologist")
 						}
-						className="border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
-					hover:bg-blue-100 hover:translate-x-[-30px] duration-500"
+						className={`border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
+							hover:bg-blue-100 hover:translate-x-[-30px] duration-500 ${speciality === "Dermatologist" && "bg-blue-100"}`}
 					>
 						Dermatologist
 					</p>
@@ -94,8 +104,8 @@ const Doctors = () => {
 								? navigate("/doctors")
 								: navigate("/doctors/Gastroenterologist")
 						}
-						className="border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
-					hover:bg-blue-100 hover:translate-x-[-30px] duration-500"
+						className={`border pl-4 py-3 rounded-xl w-[200px] cursor-pointer
+							hover:bg-blue-100 hover:translate-x-[-30px] duration-500 ${speciality === "Gastroenterologist" && "bg-blue-100"}`}
 					>
 						Gastroenterologist
 					</p>
